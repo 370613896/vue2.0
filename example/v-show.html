@@ -4,17 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript" src="../assets/js/vue.js"></script>
-    <title>v-if&v-else 实例</title>
+    <title>v-show 实例</title>
 </head>
 <body>
-    <h1>v-if&v-else</h1>
+    <h1>v-show </h1>
     <hr>
     <div id="app">
-        <div v-if="isLogin">
+        <div v-show="isLogin">
             你好，欢迎登陆！
-        </div>
-        <div v-else>
-            你好，请登陆！
         </div>
     </div>
     <script type="text/javascript">
@@ -25,8 +22,6 @@
             }
         })
     </script>
-    <!--
-        v-if： 判断是否加载，可以减轻服务器的压力，在需要时加载。
-    -->
+    <!--- v-show：调整css dispaly属性，可以使客户端操作更加流畅。 -->
 </body>
 </html>
