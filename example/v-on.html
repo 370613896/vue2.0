@@ -46,6 +46,7 @@
                     this.count--;
                 },
                 onEnter: function() {
+                    // 因为文本框的数字会默认转变成字符串，所以我们需要用parseInt()函数进行整数转换。
                     this.count = this.count + parseInt(this.count2);
                 },
                 minusOnEnter: function() {
