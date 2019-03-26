@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="../assets/js/vue.js"></script>
+    <title>v-on 事件绑定实例</title>
+</head>
+
+<body>
+    <h1>v-on 事件绑定实例</h1>
+    <hr>
+    <div id="app">
+        本场比赛得分:{{count}}
+        <p>
+            <button v-on:click="Plus">加分</button>
+            <button @click="minus">减分</button>
+            <hr>
+            <hr>
+            <br>
+            <br>
+            <hr>
+            <hr>
+
+            <!--  @keyup.enter="onEnter"绑定回车键 -->
+            <!-- <input type="text" @keyup.enter="onEnter" v-model="count2"> -->
+            <input type="text" v-model="count2">
+            <button @click="onEnter">加分</button>
+            <button @click="minusOnEnter">减分</button>
+        </p>
+
+    </div>
+    <script type="text/javascript">
+        var app = new Vue({
+            el: '#app',
+            data: {
+                count: 0,
+                count2: 1
+            },
+            methods: {
+                Plus: function() {
+                    this.count++;
+                },
+                minus: function() {
+                    this.count--;
+                },
+                onEnter: function() {
+                    this.count = this.count + parseInt(this.count2);
+                },
+                minusOnEnter: function() {
+                    this.count = this.count - parseInt(this.count2);
+                }
+
+            },
+        })
+    </script>
+</body>
+
+</html>
